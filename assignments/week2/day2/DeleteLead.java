@@ -36,38 +36,63 @@ public class DeleteLead {
 
 		// username
 		driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
-		Thread.sleep(2000);
+
 		// password
 		driver.findElement(By.id("password")).sendKeys("crmsfa");
-		Thread.sleep(2000);
+
 		// login button
 		driver.findElement(By.className("decorativeSubmit")).click();		
-		Thread.sleep(2000);
-		   Thread.sleep(2000);
 		
 		// Click CRM/SFA
 		driver.findElement(By.linkText("CRM/SFA")).click();
-		Thread.sleep(2000);
 		
 		//click on leads
 		driver.findElement(By.linkText("Leads")).click();
-		Thread.sleep(2000);
+
 		//click on find leads
 		driver.findElement(By.linkText("Find Leads")).click();
-		Thread.sleep(2000);
+
 		//click on phone number
 		driver.findElement(By.xpath("//span[text()='Phone']")).click();
-		Thread.sleep(2000);
+
 		//enter phone number
-		driver.findElement(By.name("phoneNumber")).sendKeys("9876543212");
-		Thread.sleep(2000);
+		driver.findElement(By.name("phoneNumber")).sendKeys("9988776655");
+
 		//click on find button
-        driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
-        Thread.sleep(2000);
-        //capture first id
+		driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
+		
+		//capture first id
+		String LeadID = driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']//a")).getText();
+		System.out.println("LeadID : " + LeadID);
+		Thread.sleep(1000);
+		
+		//click First Resulting lead
+		driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']//a")).click();;
+		Thread.sleep(1000);
+		
+		//click Delete
+		driver.findElement(By.linkText("Delete"));
         
+		//click on find leads
+		driver.findElement(By.linkText("Find Leads")).click();
 		
+		//enter captured lead ID
+		driver.findElement(By.name("id")).sendKeys(LeadID);
+
+		//click on find button
+		driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
+        
+        	boolean status = driver.findElement(By.xpath("//div[text()='No records to display']")).isDisplayed();
+
+        	if (status) {
+        		System.out.println("This message confirms the successful deletion of the mentioned Lead Id");
+		} 
+        
+        	else {
+			System.err.println("Deletion step failed");
+		}
 		
+        	driver.close();
 	}
 
 }
