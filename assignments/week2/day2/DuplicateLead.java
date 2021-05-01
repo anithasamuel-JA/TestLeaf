@@ -18,7 +18,7 @@ public class DuplicateLead {
 		driver.get("http://leaftaps.com/opentaps/control/login");
 		driver.manage().window().maximize();
     
-    // username
+   // username
 		driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
 
 		// password
@@ -43,40 +43,42 @@ public class DuplicateLead {
 		driver.findElement(By.name("emailAddress")).sendKeys("test@gmail.com");
 
 		//click on find button
-    driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
-    
-    //capture first id
-    String LeadID = driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']//a")).getText();
-    System.out.println("LeadID : " + LeadID);
-    Thread.sleep(1000);
-    
-    //click First Resulting lead
-    driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']//a")).click();;
-    Thread.sleep(1000);
-    
-    //get the name
-    String name = driver.findElement(By.id("viewLead_firstName_sp")).getText();
-    
-    //click Duplicate Lead
-    driver.findElement(By.linkText("Duplicate Lead"));
+        driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
+
+        //capture first id
+        String LeadID = driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']//a")).getText();
+        System.out.println("LeadID : " + LeadID);
+        Thread.sleep(1000);
+
+        //click First Resulting lead
+        driver.findElement(By.xpath("//div[@class='x-grid3-cell-inner x-grid3-col-partyId']//a")).click();;
+        Thread.sleep(1000);
+
+        //get the name
+        String name = driver.findElement(By.id("viewLead_firstName_sp")).getText();
+        
+        //click Duplicate Lead
+        driver.findElement(By.linkText("Duplicate Lead"));
         
 		//Verify the title as Duplicate Lead
-    String duplicate = driver.findElement(By.id("sectionHeaderTitle_leads")).getText();
-    System.out.println(duplicate);
+        String duplicate = driver.findElement(By.id("sectionHeaderTitle_leads")).getText();
+        System.out.println(duplicate);
         
 		//click create lead
-    driver.findElement(By.className("smallSubmit")).click();
+	    driver.findElement(By.className("smallSubmit")).click();
 
 		//Get the duplicate lead name
-    String dup_name = driver.findElement(By.id("viewLead_firstName_sp")).getText();
-    
-    //Confirm the duplicate name
-    if(name==dup_name) {
+	    String dup_name = driver.findElement(By.id("viewLead_firstName_sp")).getText();
+	    
+	    //Confirm the duplicate name
+	    if(name==dup_name) {
 	    	System.out.println("Duplicate name is same as original name");
-    }
-    else {
+	    }
+	    else {
 	    	System.out.println("Duplicate name and original name are different");
-    }
-    driver.close();
+	    }
+	   
+        driver.close();
 	}
+
 }
