@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TC001_Ordering_mobile {
+public class OrderingMobile {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
