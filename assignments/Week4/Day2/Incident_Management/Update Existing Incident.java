@@ -10,11 +10,10 @@ public class UpdateExistingIncident {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver"); 
-		WebDriver driver = new ChromeDriver();
 		
-//		WebDriverManager.chromedriver().setup();
-//		ChromeDriver driver= new ChromeDriver();
+		
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver= new ChromeDriver();
 		
 		driver.get("https://dev103117.service-now.com");
 		driver.manage().window().maximize();	
