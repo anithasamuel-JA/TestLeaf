@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TC005_Delete_Incident {
+public class DeleteIncident {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
