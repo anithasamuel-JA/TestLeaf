@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Assess_the_Change_Request {
+public class AssesstheChangeRequest {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
