@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class DeleteLead extends LeadsSetup {
+public class DeleteLead extends TestBase {
 
 	@DataProvider(name = "TestData")
 	public Object[][] getData() throws InvalidFormatException, IOException {
