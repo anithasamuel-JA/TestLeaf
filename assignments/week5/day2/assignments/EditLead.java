@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class EditLead extends LeadsSetup {
+public class EditLead extends TestBase {
 
 	@DataProvider(name = "TestData")
 	public Object[][] getData() throws InvalidFormatException, IOException {
