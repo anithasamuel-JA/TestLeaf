@@ -10,7 +10,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class MergeLead extends LeadsSetup {
+public class MergeLead extends TestBase {
 
 	@DataProvider(name = "TestData")
 	public Object[][] getData() throws InvalidFormatException, IOException {
