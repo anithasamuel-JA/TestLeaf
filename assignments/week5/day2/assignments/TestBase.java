@@ -8,7 +8,7 @@ import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LeadsSetup {
+public class TestBase {
 
 	ChromeDriver driver;
 
