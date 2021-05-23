@@ -44,9 +44,9 @@ public class DeleteLead extends BaseSteps {
 		boolean status = driver.findElement(By.xpath("//div[text()='No records to display']")).isDisplayed();
 
 		if (status) {
-			System.out.println("This message confirms the successful deletion of the mentioned Lead Id");
+			System.out.println("This message confirms the successful deletion");
 		} else {
-			System.err.println("Deletion step failed");
+			System.err.println("Deletion step is failed");
 		}
 	}
 }
