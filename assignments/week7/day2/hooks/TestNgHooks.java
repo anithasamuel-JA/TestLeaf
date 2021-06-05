@@ -1,4 +1,4 @@
-package assignments.week7.day2.hooks;
+package week7.day2.assignments.hooks;
 
 import java.io.IOException;
 
