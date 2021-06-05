@@ -1,4 +1,4 @@
-package week7.day2.assignments.pages;
+package assignments.week7.day2.pages;
 
 import week7.day2.assignments.hooks.TestNgHooks;
 
