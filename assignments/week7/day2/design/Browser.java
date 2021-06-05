@@ -1,4 +1,4 @@
-package assignments.week7.day2.design;
+package week7.day2.assignments.design;
 
 import java.net.MalformedURLException;
 import java.util.List;
