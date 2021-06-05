@@ -1,4 +1,4 @@
-package assignments.week7.day2.design;
+package week7.day2.assignments.design;
 
 import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.NoSuchElementException;
