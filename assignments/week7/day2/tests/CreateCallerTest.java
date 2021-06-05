@@ -22,10 +22,22 @@ public class CreateCallerTest extends TestNgHooks {
 	public void createcallertest(String firstname, String lastname, String phno, String email, String usertitle,
 			String mobile) throws InterruptedException {
 
-		new LoginServiceNow().clickMainFrame().typeUsername("admin").typePassword("India@123").clickLogin()
-				.verifyWelcomeMsg().typeFilter("Callers").switchParentFrame().clickNewButton().typeFirstname(firstname)
-				.typeLastname(lastname).typeEmail(email).typePhone(phno).typeUsertitle(usertitle).typeMobile(mobile)
-				.clickSubmit();
+		new LoginServiceNow()
+			.clickMainFrame()
+			.typeUsername("admin")
+			.typePassword("India@123")
+			.clickLogin()
+			.verifyWelcomeMsg()
+			.typeFilter("Callers")
+			.switchParentFrame()
+			.clickNewButton()
+			.typeFirstname(firstname)
+			.typeLastname(lastname)
+			.typeEmail(email)
+			.typePhone(phno)
+			.typeUsertitle(usertitle)
+			.typeMobile(mobile)
+			.clickSubmit();
 
 	}
 
